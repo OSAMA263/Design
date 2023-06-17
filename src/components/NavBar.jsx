@@ -10,7 +10,7 @@ export default function NavBar() {
     <motion.div
       initial={{ y: "-100vh" }}
       animate={{ y: 0 }}
-      transition={{ delay: 0.4 }}
+      transition={{ delay: .6,type:"spring",mass:.4}}
       className="my-14 font-serif"
     >
       <div className="mx-auto w-[90%] justify-between md:flex md:w-[80%] lg:w-[70%]">

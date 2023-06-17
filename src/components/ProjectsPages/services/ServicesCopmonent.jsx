@@ -12,7 +12,7 @@ export default function ServicesCopmonent({ cards, header }) {
         </div>
         {/* projects */}
         <div className="mx-auto grid w-[75%] items-center gap-x-12 gap-y-8 md:w-auto md:grid-cols-3 md:gap-y-28">
-         <AnimatePresence>
+         <AnimatePresence mode="wait">
           {cards.map(({ img, h1, p }, i) => (
             <motion.div
               key={i}

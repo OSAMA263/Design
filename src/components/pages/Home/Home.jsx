@@ -33,7 +33,7 @@ export default function Home() {
     <motion.div
       initial={{ x: "-100vw" }}
       animate={{ x: 0, opacity: 1 }}
-      exite={{ x: "100vw", opacity: 0 }} transition={{delay:.4}}
+      exit={{ x: "100vw", opacity: 0 }} transition={{delay: 0.2,type:"spring",mass:.4}}
       className="mx-auto 2xl:w-[70%] lg:w-[80%] w-[90%] font-serif"
     >
       <HomeHero />

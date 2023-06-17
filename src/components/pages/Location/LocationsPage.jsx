@@ -57,8 +57,8 @@ export default function LocationsPage() {
     <motion.section
       initial={{ x: "-100vw" }}
       animate={{ x: 0, opacity: 1 }}
-      exite={{ x: "100vw", opacity: 0 }}
-      transition={{ delay: 0.4 }}
+      exit={{ x: "100vw", opacity: 0 }}
+      transition={{delay: 0.2,type:"spring",mass:.4}}
       className="mx-auto w-[90%] font-serif lg:w-[80%] 2xl:w-[70%]"
     >
       {sections.map(({ text, parentDiv, img }, i) => (
