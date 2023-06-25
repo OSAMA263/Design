@@ -19,7 +19,7 @@ export default function LocationsSections() {
               className="flex flex-col items-center mb-12 xl:mb-0 justify-center gap-4"
               key={i}
             >
-              <img src={src} className="xl:h-[150px] xl:w-[202px] h-[20rem]" alt="" />
+              <img src={src} className="xl:h-[150px] xl:w-[202px] " alt="" />
               <h1 className="mb-4 text-xl">{h1}</h1>
               <button className="mt-auto rounded-md bg-[#e7816b] p-3 px-4 text-white transition-colors hover:bg-[#ffad9b] ">
                 SEE LOCATION
