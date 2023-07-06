@@ -30,9 +30,7 @@ export default function NavBar() {
           </button>
         </div>
         <div
-          className={`${
-            Toggle && "hidden"
-          } mt-4 flex justify-center border-t border-black md:mt-0 md:block md:border-t-0`}
+          className={`${Toggle&&"!max-h-[100px]"} transition-all duration-500 overflow-hidden md:max-h-[100px] max-h-0  mt-4 flex justify-center border-t border-black md:mt-0 md:border-t-0`}
         >
           <ul className="mt-4 gap-5 sm:flex md:ms-auto md:mt-0 [&>a.active]:text-[#c23c22] [&>a]:transition-all after:[&>a]:block after:[&>a]:h-[1px] after:[&>a]:w-[0px] after:[&>a]:bg-[#1d1c1e] after:[&>a]:transition-all hover:[&>a]:text-[#e7816b] hover:after:[&>a]:w-[60%]">
             <NavLink to="/about">OUR COMPANY</NavLink>
