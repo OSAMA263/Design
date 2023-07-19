@@ -7,8 +7,8 @@ import AppDesign from "./components/ProjectsPages/AppDesign/AppDesign";
 import WebDesign from "./components/ProjectsPages/WebDesign/WebDesign";
 import GraphicDesign from "./components/ProjectsPages/GraphicDesign/GraphicDesign";
 import { AnimatePresence } from "framer-motion";
-import NavBar from "./components/NavBar.jsx";
-import Footer from "./components/Footer.jsx";
+import NavBar from "./components/Global_components/NavBar.jsx";
+import Footer from "./components/Global_components/Footer.jsx";
 
 function App() {
   const location = useLocation();

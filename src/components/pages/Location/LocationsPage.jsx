@@ -1,58 +1,10 @@
-import React from "react";
 import img1 from "../../../imgs/locations/image-map-australia.3afe58f8.png";
 import img2 from "../../../imgs/locations/image-map-canada.dce629d0.png";
 import img3 from "../../../imgs/locations/image-map-united-kingdom.f1e269b3.png";
 import { motion } from "framer-motion";
 
 export default function LocationsPage() {
-  const sections = [
-    {
-      text: {
-        className: "xl:text-end",
-        h1: "Canada",
-        leftContent: [
-          "Design UK Office",
-          "13 Colorado Way",
-          "Rhyd-y-fro SA8 9GA",
-        ],
-        rightContent: [
-          "Contact Us (Central Office)",
-          "P: +1 253-863-8967",
-          "M: contact@designo.co",
-        ],
-      },
-      parentDiv: "",
-      img: img2,
-    },
-    {
-      text: {
-        className: "xl:text-start",
-        h1: "Australia",
-        leftContent: [
-          "Design UK Office",
-          "13 Colorado Way",
-          "Rhyd-y-fro SA8 9GA",
-        ],
-        rightContent: ["Contact", "P: (02) 6720 9092", "M: contact@designo.au"],
-      },
-      parentDiv: "flex-row-reverse",
-      img: img3,
-    },
-    {
-      text: {
-        className: "xl:text-end",
-        h1: "United Kingdom",
-        leftContent: [
-          "Design UK Office",
-          "13 Colorado Way",
-          "Rhyd-y-fro SA8 9GA",
-        ],
-        rightContent: ["Contact", "P: 078 3115 1400", "M: contact@designo.uk"],
-      },
-      parentDiv: "",
-      img: img1,
-    },
-  ];
+  
   return (
     <motion.section
       initial={{ x: "-100vw" }}
@@ -63,10 +15,10 @@ export default function LocationsPage() {
     >
       {sections.map(({ text, parentDiv, img }, i) => (
         <div
-          className={`mb-32 mt-20 items-center justify-between overflow-hidden rounded-3xl xl:flex ${parentDiv}`}
+          className={`mb-32 mt-20 items-center justify-between overflow-hidden rounded-3xl lg:flex ${parentDiv}`}
           key={i}
         >
-          <img src={img} className="w-full rounded-3xl xl:w-auto" alt="" />
+          <img src={img} className="mx-auto sm:w-1/2 lg:mx-0 rounded-3xl lg:w-auto" alt="" />
           <div
             className={`mt-12 bg-white text-center xl:mt-0 [&>h1]:text-[#e7816b] [&>p]:text-black ${text.className}`}
           >
@@ -93,3 +45,52 @@ export default function LocationsPage() {
     </motion.section>
   );
 }
+
+const sections = [
+  {
+    text: {
+      className: "xl:text-end",
+      h1: "Canada",
+      leftContent: [
+        "Design UK Office",
+        "13 Colorado Way",
+        "Rhyd-y-fro SA8 9GA",
+      ],
+      rightContent: [
+        "Contact Us (Central Office)",
+        "P: +1 253-863-8967",
+        "M: contact@designo.co",
+      ],
+    },
+    parentDiv: "",
+    img: img2,
+  },
+  {
+    text: {
+      className: "xl:text-start",
+      h1: "Australia",
+      leftContent: [
+        "Design UK Office",
+        "13 Colorado Way",
+        "Rhyd-y-fro SA8 9GA",
+      ],
+      rightContent: ["Contact", "P: (02) 6720 9092", "M: contact@designo.au"],
+    },
+    parentDiv: "flex-row-reverse",
+    img: img3,
+  },
+  {
+    text: {
+      className: "xl:text-end",
+      h1: "United Kingdom",
+      leftContent: [
+        "Design UK Office",
+        "13 Colorado Way",
+        "Rhyd-y-fro SA8 9GA",
+      ],
+      rightContent: ["Contact", "P: 078 3115 1400", "M: contact@designo.uk"],
+    },
+    parentDiv: "",
+    img: img1,
+  },
+];

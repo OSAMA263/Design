@@ -10,20 +10,21 @@ export default function LocationsSections() {
     { src: img3, h1: "UNITED KINGDOM" },
   ];
 
+  const styles = {
+    btn: "mt-auto rounded-md bg-[#e7816b] p-3 px-4 text-white transition-colors hover:bg-[#ffad9b] ",
+  };
   return (
     <>
       <section>
-        <div className="xl:flex items-center justify-between font-serif">
+        <div className="items-center justify-between font-serif xl:flex">
           {divs.map(({ src, h1 }, i) => (
             <div
-              className="flex flex-col items-center mb-12 xl:mb-0 justify-center gap-4"
+              className="flex flex-col items-center justify-center gap-4 mb-12 xl:mb-0"
               key={i}
             >
               <img src={src} className="xl:h-[150px] xl:w-[202px] " alt="" />
               <h1 className="mb-4 text-xl">{h1}</h1>
-              <button className="mt-auto rounded-md bg-[#e7816b] p-3 px-4 text-white transition-colors hover:bg-[#ffad9b] ">
-                SEE LOCATION
-              </button>
+              <button className={styles.btn}>SEE LOCATION</button>
             </div>
           ))}
         </div>
