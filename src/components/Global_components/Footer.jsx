@@ -21,7 +21,7 @@ export default function Footer() {
     // footer
     nav_footer: "mx-auto w-[90%] border-b border-[#333136] pb-5 lg:w-[60%]",
     ul_nav_links:
-      "flex justify-center gap-4 md:w-[70%] md:gap-9 lg:w-auto [&>a.active]:text-[#c23c22] [&>a]:font-semibold [&>a]:transition-all after:[&>a]:block after:[&>a]:h-[1px] after:[&>a]:w-[0px] after:[&>a]:bg-[#1d1c1e] after:[&>a]:transition-all hover:[&>a]:text-[#e7816b] hover:after:[&>a]:w-[60%]",
+      "flex justify-center gap-4 md:w-[70%] md:gap-9 lg:w-auto [&_a.active]:text-[#c23c22] [&_a]:font-semibold [&_a]:transition-all after:[&_a]:block after:[&_a]:h-[1px] after:[&_a]:w-[0px] after:[&_a]:bg-[#1d1c1e] after:[&_a]:transition-all hover:[&_a]:text-[#e7816b] hover:after:[&_a]:w-[60%]",
     footer_contact_wrapper:
       "mx-auto w-[80%] justify-between py-12 text-center md:flex lg:w-[70%]",
     footer_contact_info:
@@ -53,7 +53,7 @@ export default function Footer() {
         <footer className="bg-[#1d1c1e] pb-8 pt-48">
           <nav className={styles.nav_footer}>
             <div className="items-center justify-center text-white md:flex md:justify-between">
-              <NavLink onClick={scrollToTop} to="/">
+              <NavLink onClick={scrollToTop} aria-label="home" to="/">
                 <img
                   src={logo}
                   className="mx-auto mb-8 w-[70%] md:mx-0 md:mb-0"
@@ -61,15 +61,21 @@ export default function Footer() {
                 />
               </NavLink>
               <ul className={styles.ul_nav_links}>
-                <NavLink onClick={scrollToTop} to="/about">
-                  OUR COMPANY
-                </NavLink>
-                <NavLink onClick={scrollToTop} to="/locations">
-                  LOCATIONS
-                </NavLink>
-                <NavLink onClick={scrollToTop} to="/contact">
-                  CONTACTS
-                </NavLink>
+                <li>
+                  <NavLink onClick={scrollToTop} to="/about">
+                    OUR COMPANY
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink onClick={scrollToTop} to="/locations">
+                    LOCATIONS
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink onClick={scrollToTop} to="/contact">
+                    CONTACTS
+                  </NavLink>
+                </li>
               </ul>
             </div>
           </nav>

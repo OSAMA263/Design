@@ -16,17 +16,17 @@ function App() {
   return (
     <>
       <NavBar />
-      <AnimatePresence mode="wait">
-        <Routes location={location} key={location.pathname} >
-          <Route element={<Home />} path="/" />
-          <Route element={<About />} path="/about" />
-          <Route element={<LocationsPage />} path="/locations" />
-          <Route element={<Contact />} path="/contact" />
-          <Route element={<AppDesign />} path="/app" />
-          <Route element={<WebDesign />} path="/web" />
-          <Route element={<GraphicDesign />} path="/graphic" />
-        </Routes>
-      </AnimatePresence>
+        <AnimatePresence mode="wait">
+          <Routes location={location} key={location.pathname}>
+            <Route element={<Home />} path="/" />
+            <Route element={<About />} path="/about" />
+            <Route element={<LocationsPage />} path="/locations" />
+            <Route element={<Contact />} path="/contact" />
+            <Route element={<AppDesign />} path="/app" />
+            <Route element={<WebDesign />} path="/web" />
+            <Route element={<GraphicDesign />} path="/graphic" />
+          </Routes>
+        </AnimatePresence>
       <Footer />
     </>
   );

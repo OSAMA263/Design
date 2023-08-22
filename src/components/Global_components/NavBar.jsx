@@ -17,7 +17,7 @@ export default function NavBar() {
     nav_links_wrapper: `${
       Toggle && "!max-h-[100px]"
     } mt-4 flex max-h-0 justify-center overflow-hidden border-t border-black transition-all duration-500 md:mt-0 md:max-h-[100px] md:border-t-0`,
-    ul: "mt-4 gap-5 sm:flex md:ms-auto md:mt-0 [&>a.active]:text-[#c23c22] [&>a]:transition-all after:[&>a]:block after:[&>a]:h-[1px] after:[&>a]:w-[0px] after:[&>a]:bg-[#1d1c1e] after:[&>a]:transition-all hover:[&>a]:text-[#e7816b] hover:after:[&>a]:w-[60%]",
+    ul: "mt-4 gap-5 sm:flex md:ms-auto md:mt-0 [&_a.active]:text-[#c23c22] [&_a]:transition-all after:[&_a]:block after:[&_a]:h-[1px] after:[&_a]:w-[0px] after:[&_a]:bg-[#1d1c1e] after:[&_a]:transition-all hover:[&_a]:text-[#e7816b] hover:after:[&_a]:w-[60%]",
   };
 
   return (
@@ -30,10 +30,11 @@ export default function NavBar() {
       >
         <div className={styles.navbar_wrapper}>
           <div className="flex">
-            <NavLink className="w-auto" to="/">
+            <NavLink className="w-auto" aria-label="home0" to="/">
               <img className={styles.logo} src={logo} alt="" />
             </NavLink>
             <button
+              aria-label="menu"
               onClick={() => setToggle((prev) => !prev)}
               className={styles.expand_navbar_btn}
             >
@@ -44,9 +45,15 @@ export default function NavBar() {
           </div>
           <div className={styles.nav_links_wrapper}>
             <ul className={styles.ul}>
-              <NavLink to="/about">OUR COMPANY</NavLink>
-              <NavLink to="/locations">LOCATIONS</NavLink>
-              <NavLink to="/contact">CONTACTS</NavLink>
+              <li>
+                <NavLink to="/about">OUR COMPANY</NavLink>
+              </li>
+              <li>
+                <NavLink to="/locations">LOCATIONS</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">CONTACTS</NavLink>
+              </li>
             </ul>
           </div>
         </div>
