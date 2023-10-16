@@ -52,7 +52,7 @@ export default function NavBar() {
               <li>
                 <NavLink onClick={handleToggleNavlinks} to="/about">OUR COMPANY</NavLink>
               </li>
-              <i>
+              <li>
                 <NavLink onClick={handleToggleNavlinks} to="/locations">LOCATIONS</NavLink>
               </li>
               <li>
