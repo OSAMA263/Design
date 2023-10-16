@@ -7,6 +7,10 @@ import Headroom from "react-headroom";
 export default function NavBar() {
   const [Toggle, setToggle] = useState(false);
 
+  const handleToggleNavlinks=()=>{
+    setToggle((prev) => !prev)
+  }
+  
   const styles = {
     navbar_wrapper:
       "mx-auto w-[90%] justify-between md:flex md:w-[80%] lg:w-[70%]",
@@ -30,12 +34,12 @@ export default function NavBar() {
       >
         <div className={styles.navbar_wrapper}>
           <div className="flex">
-            <NavLink className="w-auto" aria-label="home0" to="/">
+            <NavLink onClick={handleToggleNavlinks} className="w-auto" aria-label="home0" to="/">
               <img className={styles.logo} src={logo} alt="" />
             </NavLink>
             <button
               aria-label="menu"
-              onClick={() => setToggle((prev) => !prev)}
+              onClick={handleToggleNavlinks}
               className={styles.expand_navbar_btn}
             >
               <span className="w-[50px]"></span>
@@ -46,13 +50,13 @@ export default function NavBar() {
           <div className={styles.nav_links_wrapper}>
             <ul className={styles.ul}>
               <li>
-                <NavLink to="/about">OUR COMPANY</NavLink>
+                <NavLink onClick={handleToggleNavlinks} to="/about">OUR COMPANY</NavLink>
+              </li>
+              <i>
+                <NavLink onClick={handleToggleNavlinks} to="/locations">LOCATIONS</NavLink>
               </li>
               <li>
-                <NavLink to="/locations">LOCATIONS</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contact">CONTACTS</NavLink>
+                <NavLink onClick={handleToggleNavlinks} to="/contact">CONTACTS</NavLink>
               </li>
             </ul>
           </div>
